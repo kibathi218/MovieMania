@@ -6,65 +6,99 @@ body {
   list-style: none;
 }
 
-/* HERO SECTION */
+/*------------ HERO SECTION ----------*/
 
 .logo {
     font-size: 40px;
 }
 
-.hero-img {
-    width: 100%;
-  
-  }
-  
-  .hero-container {
-    position: relative;
-  }
+img.hero-img {
+  max-width: 100%;
+  height: auto;
+  max-height: 550px;
+  display: flex; 
+  justify-content: space-between;
+  margin: auto;
+}
 
-#netflixContainer,
-#huluContainer,
-#hboMaxContainer {
+/*--------------- MOVIES ---------------*/
+
+h2.movie-platforms-btn {
+  padding-left: 60px;
+  font-size: 40px;
+}
+
+
+div.platformContainer {  
   display: flex;
-  flex-direction:row;
-  padding-bottom: 70px;
-  padding-top: 30px;
   justify-content: center;
+
 }
 
-/* MOVIE SECTION  */
-
-.movieCard {
-  flex: 33.33%;
-  flex-wrap: wrap;
-  padding: 10px 40px 10px 70px;
-  display:inline-flex;
-  font-size: 20px;
-  font-weight:bold;
+div.movieCard {
+  padding: 0% 2% 0%;
 }
 
-.movieCard > h3 {
+div.movieCard > h3 {
     padding-top: 10px;
 }
 
-.movieCard > img {
+div.movieCard > img {
   width: 210px;
   height: auto;
-
 }
 
-/* @media screen and (max-width: 600px) {
-    .movieCard {
-        background-color: red;
+@media screen and (max-width: 650px) {
+    div.platformContainer {
         display: block;
+        align-items: center;
+        text-align: center;
+
     }
 
-    .movieCard > img {
-        padding: 100px;
+    div.likesContainer {
+      justify-content: center;
+    }
+
+    div.movieCard > img {
         width: 300px;
     }
-} */
 
-.movieCard > img:hover {
+    div.movieCard {
+      padding: 20px 0px
+    }
+
+    div.dislikesContainer {
+      justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1190px) {
+  div.platformContainer {
+      display: block;
+      align-items: center;
+      text-align: center;
+
+  }
+
+  div.likesContainer {
+    justify-content: center;
+  }
+
+  div.dislikesContainer {
+    justify-content: center;
+  }
+
+  div.movieCard > img {
+      width: 300px;
+  }
+
+  div.movieCard {
+    padding: 20px 0px
+  }
+}
+
+div.movieCard > img:hover {
     filter: grayscale(60%);
     -webkit-filter: grayscale(60%);
     -moz-filter: grayscale(60%);
@@ -76,35 +110,36 @@ body {
 
 
 
-.bottom-left {
-  position: absolute;
-  bottom: 0px;
-  left: 43%;
-}
 
-.play-icon {
-    width: 100px;
-}
+/*----------------- LIKES STYLING ------------- */
 
-.movie-platforms-btn {
-    padding-left: 60px;
-    font-size: 40px;
-}
 
 .likeButton  {
-    width: 210px;
+    width: 100px;
+    height: 40px;
     background-color: black;
+    margin-right: 15px;
+
+}
+
+.dislikesContainer {
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
 
 .dislikeButton {
-    width: 210px;
+    width: 100px;
+    height: 40px;
     background-color: black;
+    margin-right: 15px;
 }
 
-/* .hideLikes {
-    display: none;
-} */
-
+.likesContainer {
+  display: flex;
+  align-items: center;
+  
+}
 
 
 
@@ -116,6 +151,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 3rem;
   }
   
   .footer-subscription {
